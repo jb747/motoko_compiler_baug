@@ -1,4 +1,4 @@
-# plug_jwt_proto
+# README
 
 ```bash
 cd plug_jwt_proto/
@@ -12,7 +12,14 @@ The .devcontainer directory contains docker instructions to build the container 
 
 In a terminal: `dfx start --clean`
 
-In another terminal: `dfx deploy`
+In another terminal: 
+
+```
+cd src/plug_jwt_proto_frontend
+npm i
+cd ../..
+dfx deploy
+```
 
 In another terminal: `make`
 
