@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "plug_jwt_proto_backend": {
+      "main": "src/plug_jwt_proto_backend/main.mo",
+      "type": "motoko"
+    },
+    "plug_jwt_proto_frontend": {
+      "dependencies": [
+        "plug_jwt_proto_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/plug_jwt_proto_frontend/src/index.html"
+      },
+      "source": [
+        "src/plug_jwt_proto_frontend/assets",
+        "dist/plug_jwt_proto_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": "vessel sources"
+    }
+  },
+  "dfx": "0.11.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
